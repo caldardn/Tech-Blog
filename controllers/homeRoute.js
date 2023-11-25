@@ -1,6 +1,6 @@
 const router = require("express").Router();
 const { Post, User, Comment } = require("../models");
-const withAuth = require("../../utils/auth");
+// const withAuth = require("../../utils/auth");
 
 router.get("/", async (req, res) => {
   try {
@@ -26,10 +26,7 @@ router.get("/post/:id", async (req, res) => {
         { model: Comment, include: [User]}
     ],
     });
-    // if (!postData) {
-    //   res.status(404).json({ message: "No post found with this id!" });
-    //   return;
-    // }
+
     const post = postData.get({ plain: true });
     res.render("post", {
         ...post,
