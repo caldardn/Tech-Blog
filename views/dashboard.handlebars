@@ -1,0 +1,18 @@
+<main>
+    <div>
+        <h2>Your Dashboard</h2>
+        <a href="/newPost">Create a New Post</a>
+    </div>
+
+    <div>
+        <h2> Your Posts</h2>
+        {{#each posts}}
+        <div>
+            <h3>{{post_title}}</h3>
+            <p>{{post_content}}</p>
+            <p>Created by: {{user.username}} on {{format_date}}</p>
+            <a href="/editPost/{{id}}">Edit Post</a>
+            <a href="/deletePost/{{id}}">Delete Post</a>
+        </div>
+        {{/each}}
+</main>

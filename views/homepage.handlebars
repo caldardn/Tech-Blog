@@ -1,6 +1,15 @@
-{{#each Post }}
-<div>
-    <h2>{{this.post_title}}</h2>
-    <p>{{user.username}}</p>
+<div class="container">
+  <div class="row">
+    {{#each posts }}
+    <div class="col-md-6">
+      <div class="card">
+        <div class="card-body">
+            <a href="/post/{{id}}" class="links">{{post_title}}</a>
+          {{!-- <h2 class="card-title">{{this.post_title}}</h2> --}}
+          <p class="card-text">{{user.username}}</p>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
 </div>
-{{/each}}
