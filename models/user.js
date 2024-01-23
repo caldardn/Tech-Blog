@@ -1,6 +1,6 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcryptjs');
 const sequelize = require('../config/connection');
+const bcrypt = require('bcryptjs');
 
 class User extends Model {
     // set up method to run on instance data (per user) to check password
@@ -20,9 +20,9 @@ User.init({
         type: DataTypes.STRING,
         allowNull:false,
         unique: true,
-        validate: {
-            len: [1]
-        }
+        // validate: {
+        //     len: [1]
+        // }
     },
     password: {
         type: DataTypes.STRING,

@@ -15,9 +15,15 @@
       <h1>Tech Blog</h1>
       <nav>
         <ul>
-          <li><a href="/">Home</a></li>
-          <li><a href="/dashboard">Dash</a></li>
-          <li><a href="/login">Login</a></li>
+          <a href="/">Home</a>
+          <a href="/dashboard">Dash</a>
+          {{#if logged_in}}
+          <a class="button" href="/logout">Logout</a>
+          {{else}}
+          <a class="button" href="/login">Login</a>
+          <a class="button" href="/signup">Sign Up</a>
+          {{/if}} 
+          
         </ul>
       </nav>
     </header>
@@ -31,3 +37,5 @@
     ></script>
   </body>
 </html>
+
+<script src="./js/logout.js"></script>
