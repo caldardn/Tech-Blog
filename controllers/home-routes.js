@@ -114,7 +114,7 @@ router.get('/signup', (req, res) => {
 
 router.get('*', (req, res) => {
     res.status(404).send("Can't go there!");
-   
+    // res.redirect('/');
 })
 
 
