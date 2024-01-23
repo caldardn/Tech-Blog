@@ -1,18 +1,20 @@
-<main>
-    <div>
-        <h2>Your Dashboard</h2>
-        <a href="/newPost">Create a New Post</a>
-    </div>
+<section class="new-post-section">
+    <button type="submit" class="btn" id="create-new-post">+ Create new post</button>
+</section>
 
-    <div>
-        <h2> Your Posts</h2>
-        {{#each posts}}
-        <div>
-            <h3>{{post_title}}</h3>
-            <p>{{post_content}}</p>
-            <p>Created by: {{user.username}} on</p>
-            <a href="/editPost/{{id}}">Edit Post</a>
-            <a href="/deletePost/{{id}}">Delete Post</a>
-        </div>
+
+{{#if posts.length}}
+<section>
+    <h2>Your Dashboard</h2>
+    <ul class="post-list">
+        {{#each posts as |post|}}
+        <li>
+            {{> post-info post}}
+            <a href="/dashboard/edit/{{post.id}}" class="edit-link">edit post</a>
+        </li>
         {{/each}}
-</main>
+    </ul>
+</section>
+{{/if}}
+
+<script src="/javascript/create-post.js"></script>
