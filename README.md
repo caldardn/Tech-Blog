@@ -3,7 +3,7 @@
 
 A mysql database and CMS-style Blog built using Model View Controller (MVC) paradigm. Built using MySQL2, Express, Sequelize, Bulma, Handlebars and dotenv.
 
-**[Deployed Application](https://tech-blog-dnc-e515ef27686d.herokuapp.com/)**
+**[Deployed Application](https://dnc-tech-blog-7357c4d1528d.herokuapp.com/)**
 <br>
 </br>
 <img src="./public/images/App.PNG" alt="Web application's appearance and functionality" width="70%" height="70%">
